@@ -36,7 +36,41 @@ const AddRecordForm = () => {
   };
 
   return (
-    <div>AddRecordForm</div>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>タイトル:</label>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>アーティスト:</label>
+        <input
+          type="text"
+          value={artist}
+          onChange={(e) => setArtist(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>ジャンル:</label>
+        <input
+          type="text"
+          value={genre}
+          onChange={(e) => setGenre(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>リリース年:</label>
+        <input
+          type="number"
+          value={releaseYear}
+          onChange={(e) => setReleaseYear(e.target.value)}
+        />
+      </div>
+      <button type='submit'>追加</button>
+    </form>
   )
 }
 

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import { getRecords } from './services/firebase';
+import AddRecordForm from './components/AddRecordForm';
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <h1>My Record List</h1>
+      <AddRecordForm />
     </>
   )
 }
